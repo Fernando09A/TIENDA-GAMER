@@ -18,10 +18,9 @@ html, body {
     background-color: var(--bg-dark);
     color: var(--text-white);
     font-family: 'Inter', sans-serif;
-    overflow: hidden; /* Evita scroll para que rellene exactamente toda la pantalla */
+    overflow: hidden; 
 }
  
-/* Contenedor principal que distribuye Header, Hero y Footer en el 100% de la altura */
 .fullscreen-wrapper {
     position: relative;
     width: 100vw;
@@ -31,9 +30,6 @@ html, body {
     justify-content: space-between;
 }
  
-/* =========================================
-   EFECTOS DE FONDO (ANILLOS Y ESFERAS 3D)
-   ========================================= */
 .bg-effects {
     position: absolute;
     inset: 0;
@@ -42,7 +38,6 @@ html, body {
     z-index: 0;
 }
  
-/* Resplandor ambiental morado detrás de las esferas */
 .ambient-glow {
     position: absolute;
     top: 50%;
@@ -54,7 +49,6 @@ html, body {
     border-radius: 50%;
 }
  
-/* Anillos translúcidos concéntricos (como en la captura) */
 .ring {
     position: absolute;
     top: 50%;
@@ -76,7 +70,6 @@ html, body {
     border: 30px solid rgba(192, 132, 252, 0.05);
 }
  
-/* Esfera 3D Grande */
 .sphere-main {
     position: absolute;
     top: 50%;
@@ -92,7 +85,6 @@ html, body {
         inset 0 0 30px rgba(255, 255, 255, 0.12);
 }
  
-/* Pequeño destello brillante sobre la esfera grande */
 .sphere-glint {
     position: absolute;
     top: 28%;
@@ -104,7 +96,6 @@ html, body {
     filter: blur(1px);
 }
  
-/* Esfera Neón Pequeña */
 .sphere-small {
     position: absolute;
     top: 72%;
@@ -116,9 +107,6 @@ html, body {
     box-shadow: 0 0 35px rgba(255, 42, 133, 0.55);
 }
  
-/* =========================================
-   BARRA DE NAVEGACIÓN (SUPERIOR)
-   ========================================= */
 .navbar {
     position: relative;
     z-index: 10;
@@ -218,9 +206,6 @@ html, body {
     box-shadow: 0 0 10px var(--accent-pink);
 }
  
-/* =========================================
-   SECCIÓN CENTRAL (HERO)
-   ========================================= */
 .hero {
     position: relative;
     z-index: 10;
@@ -270,7 +255,6 @@ html, body {
     margin-bottom: 42px;
 }
  
-/* Botón Translúcido con Profundidad */
 .btn-primary {
     display: inline-flex;
     align-items: center;
@@ -297,9 +281,6 @@ html, body {
         inset 0 1px 1px rgba(255, 255, 255, 0.65);
 }
  
-/* =========================================
-   BARRA INFERIOR (INDICADOR 03)
-   ========================================= */
 .bottom-bar {
     position: relative;
     z-index: 10;

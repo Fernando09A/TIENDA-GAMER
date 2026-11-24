@@ -1,0 +1,27 @@
+<div class="game-modal" id="game-modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="game-modal__backdrop" data-close-modal></div>
+    <div class="game-modal__dialog" id="game-modal-dialog">
+        <button type="button" class="game-modal__close" data-close-modal aria-label="Cerrar">✕</button>
+        <div class="game-modal__grid">
+            <div>
+                <div class="game-modal__video">
+                    <iframe id="modal-iframe" src="" title="Tráiler" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <a id="modal-yt" href="#" target="_blank" rel="noopener noreferrer" class="game-modal__yt">Mirar en YouTube ↗</a>
+            </div>
+            <div>
+                <span class="game-modal__tag" id="modal-tag"></span>
+                <h2 class="game-modal__title" id="modal-title"></h2>
+                <p class="game-modal__desc" id="modal-desc"></p>
+                <div class="game-modal__meta">
+                    <span id="modal-score"></span>
+                    <span id="modal-platforms"></span>
+                    <strong id="modal-price"></strong>
+                </div>
+                <div class="game-modal__actions">
+                    <button type="button" class="game-modal__add" id="modal-add">AÑADIR AL CARRO</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

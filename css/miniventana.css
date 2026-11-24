@@ -1,0 +1,142 @@
+.game-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.game-modal.is-open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.game-modal__backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(5, 5, 10, 0.85);
+    backdrop-filter: blur(8px);
+}
+
+.game-modal__dialog {
+    --card-color: var(--accent-pink);
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 940px;
+    max-height: 90vh;
+    overflow-y: auto;
+    border-radius: 14px;
+    padding: 24px;
+    background: #101018;
+    border: 1px solid color-mix(in srgb, var(--card-color) 70%, white 10%);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.75);
+}
+
+.game-modal__close {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 34px;
+    height: 34px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.06);
+    color: var(--text-white);
+    cursor: pointer;
+}
+
+.game-modal__close:hover {
+    background: var(--card-color);
+    color: #09090f;
+}
+
+.game-modal__grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 24px;
+    align-items: center;
+}
+
+.game-modal__video {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #000;
+}
+
+.game-modal__video iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.game-modal__yt {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 12px;
+    color: var(--text-gray);
+    text-decoration: none;
+}
+
+.game-modal__yt:hover {
+    color: var(--card-color);
+}
+
+.game-modal__tag {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: var(--card-color);
+}
+
+.game-modal__title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 26px;
+    margin: 6px 0;
+}
+
+.game-modal__desc {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--text-gray);
+    margin: 12px 0 18px;
+}
+
+.game-modal__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    font-size: 12px;
+    color: var(--text-white);
+    margin-bottom: 18px;
+}
+
+.game-modal__actions {
+    display: flex;
+    gap: 10px;
+}
+
+.game-modal__add {
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: none;
+    background: var(--card-color);
+    color: #09090f;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+@media (max-width: 800px) {
+    .game-modal__grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticias de Videojuegos - Tienda Gamers</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/noticias.css">
+    <link rel="stylesheet" href="css/miniventana2.css">
+</head>
+<body class="page-sub">
+
+    <header class="navbar">
+        <a href="index.html" class="logo">
+            <div class="logo__icon">TG</div>
+            <div class="logo__text">
+                <span class="logo__top">TIENDA</span>
+                <span class="logo__bottom">GAMERS</span>
+            </div>
+        </a>
+        <nav class="nav-links">
+            <a class="nav-links__item nav-links__item--lift" href="index.html">INICIO</a>
+            <a class="nav-links__item nav-links__item--lift" href="catalogo.html">JUEGOS</a>
+            <a class="nav-links__item nav-links__item--lift nav-links__item--active" href="noticias.html">NOTICIAS</a>
+            <a class="nav-links__item nav-links__item--lift" href="nosotros.html">NOSOTROS</a>
+        </nav>
+        <a href="compras.html" class="cart-btn cart-btn--lift" aria-label="Bolsa de compras">
+            <svg class="cart-btn__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <path d="M16 10a4 4 0 0 1-8 0"></path>
+            </svg>
+            <span class="cart-btn__count">0</span>
+        </a>
+    </header>
+
+    <main class="news-page">
+        <div class="hero__eyebrow">
+            <span class="hero__eyebrow-line"></span>
+            <span class="hero__eyebrow-text">PORTAL GAMER — ACTUALIDAD Y NOVEDADES</span>
+        </div>
+        <h1 class="news-page__title">Noticias <span class="hero__title-outline">destacadas</span></h1>
+
+        <div class="news-feed" id="news-feed">
+            <!-- NOTICIA 1: GTA VI -->
+            <article class="news-item" style="--card-color:#ff2a85;" data-news-id="noticia-gta6" data-yt-id="KVCevEUMpwo" data-tag="GTA VI · ACTUALIDAD" data-platforms="PS5 · XBOX SERIES X|S" data-title="GTA VI: novedades de Leonida, mundo y estado del proyecto" data-desc="Grand Theft Auto VI continúa generando alta expectativa por su ambientación en el estado ficticio de Leonida, el regreso a zonas inspiradas en Vice City, los detalles de sus protagonistas y los avances sobre su ventana de lanzamiento y plataformas.">
+                <div class="news-item__thumb">
+                    <img
+                        src="https://i.ytimg.com/vi/KVCevEUMpwo/hqdefault.jpg"
+                        alt="Novedades de GTA VI"
+                        loading="lazy"
+                        onerror="if (!this.dataset.fb) { this.dataset.fb = '1'; this.src = 'https://i.ytimg.com/vi/KVCevEUMpwo/mqdefault.jpg'; }"
+                    >
+                </div>
+                <div class="news-item__body">
+                    <div class="news-item__meta">
+                        <span>GTA VI · ACTUALIDAD</span>
+                        <span>PS5 · XBOX SERIES</span>
+                    </div>
+                    <h2 class="news-item__title">GTA VI: lo último sobre Leonida y próximos avances</h2>
+                    <p class="news-item__desc">Información sobre el escenario de Leonida, el regreso a Vice City, el enfoque en sus personajes principales y lo que se espera en torno a su llegada a consolas de nueva generación.</p>
+                    <div class="news-item__footer">
+                        <span class="news-item__comments-badge">COMENTARIOS: <strong data-counter>0</strong></span>
+                        <span class="news-item__cta">VER DETALLES →</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- NOTICIA 2: FORTNITE -->
+            <article class="news-item" style="--card-color:#38bdf8;" data-news-id="noticia-fortnite-token" data-yt-id="XUk80ltEiLk" data-tag="FORTNITE · TOKENS Y TEMPORADA" data-platforms="PC · PS · XBOX · SWITCH" data-title="Fortnite: sistema de tokens, recompensas y rotación de contenido" data-desc="Fortnite mantiene su ritmo de actualizaciones constantes con nuevos pases, sistemas de tokens y recompensas desbloqueables, cambios en el mapa y rotaciones de modos dentro de su ecosistema multiplataforma.">
+                <div class="news-item__thumb">
+                    <img
+                        src="https://i.ytimg.com/vi/XUk80ltEiLk/hqdefault.jpg"
+                        alt="Novedades de Fortnite y tokens"
+                        loading="lazy"
+                        onerror="if (!this.dataset.fb) { this.dataset.fb = '1'; this.src = 'https://i.ytimg.com/vi/XUk80ltEiLk/mqdefault.jpg'; }"
+                    >
+                </div>
+                <div class="news-item__body">
+                    <div class="news-item__meta">
+                        <span>FORTNITE · TOKENS</span>
+                        <span>MULTIPLATAFORMA</span>
+                    </div>
+                    <h2 class="news-item__title">Fortnite: cómo funcionan los tokens y recompensas actuales</h2>
+                    <p class="news-item__desc">Repaso informativo a los desbloqueos con tokens, progreso de temporada, recompensas disponibles y ajustes recientes en las partidas y modos activos.</p>
+                    <div class="news-item__footer">
+                        <span class="news-item__comments-badge">COMENTARIOS: <strong data-counter>0</strong></span>
+                        <span class="news-item__cta">VER DETALLES →</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- NOTICIA 3: PRÓXIMO ESTRENO -->
+            <article class="news-item" style="--card-color:#c084fc;" data-news-id="noticia-proximo-lanzamiento" data-yt-id="wUokSPOiVrM" data-tag="PRÓXIMOS ESTRENOS · CALENDARIO" data-platforms="PC · PS5 · XBOX" data-title="Próximos estrenos: novedades y fechas en el calendario gamer" data-desc="El calendario de próximos estrenos reúne nuevas propuestas de acción, mundos abiertos y experiencias competitivas que van revelando detalles de jugabilidad, rendimiento técnico y fechas de llegada.">
+                <div class="news-item__thumb">
+                    <img
+                        src="https://i.ytimg.com/vi/wUokSPOiVrM/hqdefault.jpg"
+                        alt="Próximos estrenos de videojuegos"
+                        loading="lazy"
+                        onerror="if (!this.dataset.fb) { this.dataset.fb = '1'; this.src = 'https://i.ytimg.com/vi/wUokSPOiVrM/mqdefault.jpg'; }"
+                    >
+                </div>
+                <div class="news-item__body">
+                    <div class="news-item__meta">
+                        <span>PRÓXIMOS ESTRENOS</span>
+                        <span>PC · PS5 · XBOX</span>
+                    </div>
+                    <h2 class="news-item__title">Lo que viene: próximos lanzamientos y novedades del calendario</h2>
+                    <p class="news-item__desc">Resumen de los títulos que se acercan a su lanzamiento, avances de mecánicas, plataformas confirmadas y ventanas de estreno que los jugadores tienen en la mira.</p>
+                    <div class="news-item__footer">
+                        <span class="news-item__comments-badge">COMENTARIOS: <strong data-counter>0</strong></span>
+                        <span class="news-item__cta">VER DETALLES →</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <div id="miniventana2-slot"></div>
+
+    <script src="js/trailers-data.js"></script>
+    <script src="js/cart.js"></script>
+    <script>
+        (async function () {
+            const STORAGE_KEY = "tg_news_comments_v3";
+
+            function loadComments() {
+                try {
+                    return JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
+                } catch {
+                    return {};
+                }
+            }
+
+            function saveComments(data) {
+                localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+            }
+
+            function escapeHTML(str) {
+                return str
+                    .replace(/&/g, "&amp;")
+                    .replace(/</g, "&lt;")
+                    .replace(/>/g, "&gt;")
+                    .replace(/"/g, "&quot;");
+            }
+
+            function fallbackModalHTML() {
+                return `
+                <div class="news-modal" id="news-modal" aria-hidden="true">
+                    <div class="news-modal__backdrop" data-close-news-modal></div>
+                    <div class="news-modal__dialog" id="news-modal-dialog" role="dialog" aria-modal="true">
+                        <button type="button" class="news-modal__close" data-close-news-modal aria-label="Cerrar ventana">✕</button>
+                        <div class="news-modal__top">
+                            <div class="news-modal__video-box" id="news-modal-video-box">
+                                <iframe id="news-modal-iframe" src="" title="Video relacionado a la noticia" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <div class="news-modal__fallback" id="news-modal-fallback">
+                                    <img id="news-modal-fallback-img" src="" alt="Vista previa de la noticia">
+                                    <div class="news-modal__fallback-overlay">
+                                        <p>Si el reproductor interno no carga o está restringido, puedes abrir el video directamente en YouTube:</p>
+                                        <a id="news-modal-fallback-btn" href="#" target="_blank" rel="noopener noreferrer">ABRIR VIDEO EN YOUTUBE ↗</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="news-modal__side">
+                                <span class="news-modal__tag" id="news-modal-tag"></span>
+                                <h2 class="news-modal__title" id="news-modal-title"></h2>
+                                <p class="news-modal__desc" id="news-modal-desc"></p>
+                                <div class="news-modal__meta-row">
+                                    <span id="news-modal-platforms"></span>
+                                    <a id="news-modal-yt" href="#" target="_blank" rel="noopener noreferrer">VER EN YOUTUBE ↗</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="news-modal__comments">
+                            <div class="news-modal__comments-head">
+                                <span>COMENTARIOS DE LA NOTICIA</span>
+                                <span class="news-modal__count" id="news-modal-counter">0</span>
+                            </div>
+                            <ul class="news-modal__comments-list" id="news-modal-comments-list"></ul>
+                            <form class="news-modal__form" id="news-modal-form">
+                                <input type="text" class="news-modal__input news-modal__input--name" name="author" placeholder="Tu apodo" maxlength="24" required>
+                                <input type="text" class="news-modal__input" name="message" placeholder="Escribe un comentario sobre esta noticia..." maxlength="220" required>
+                                <button type="submit" class="news-modal__submit">PUBLICAR</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>`;
+            }
+
+            const store = loadComments();
+            let activeNewsId = null;
+
+            function updateCardCounters() {
+                document.querySelectorAll(".news-item").forEach((card) => {
+                    const id = card.dataset.newsId;
+                    const count = Array.isArray(store[id]) ? store[id].length : 0;
+                    const counter = card.querySelector("[data-counter]");
+                    if (counter) counter.textContent = count;
+                });
+            }
+
+            const slot = document.getElementById("miniventana2-slot");
+            try {
+                const res = await fetch("miniventana2.html");
+                slot.innerHTML = res.ok ? await res.text() : fallbackModalHTML();
+            } catch {
+                slot.innerHTML = fallbackModalHTML();
+            }
+
+            const modal = document.getElementById("news-modal");
+            const dialog = document.getElementById("news-modal-dialog");
+            const iframe = document.getElementById("news-modal-iframe");
+            const ytLink = document.getElementById("news-modal-yt");
+            const fallbackBox = document.getElementById("news-modal-fallback");
+            const fallbackImg = document.getElementById("news-modal-fallback-img");
+            const fallbackBtn = document.getElementById("news-modal-fallback-btn");
+            const modalCounter = document.getElementById("news-modal-counter");
+            const modalList = document.getElementById("news-modal-comments-list");
+            const modalForm = document.getElementById("news-modal-form");
+
+            function renderModalComments(newsId) {
+                const list = Array.isArray(store[newsId]) ? store[newsId] : [];
+                modalCounter.textContent = list.length;
+
+                if (list.length === 0) {
+                    modalList.innerHTML = `<li class="news-modal__empty">Aún no hay comentarios en esta noticia. ¡Sé el primero en comentar!</li>`;
+                    return;
+                }
+
+                modalList.innerHTML = list
+                    .map(
+                        (c, index) => `
+                        <li class="news-modal__comment-item">
+                            <div class="news-modal__comment-top">
+                                <strong>${escapeHTML(c.author)}</strong>
+                                <div class="news-modal__comment-actions">
+                                    <span>${escapeHTML(c.date)}</span>
+                                    <button type="button" class="news-modal__delete-btn" data-delete-comment="${index}" title="Eliminar comentario" aria-label="Eliminar comentario">✕</button>
+                                </div>
+                            </div>
+                            <p>${escapeHTML(c.message)}</p>
+                        </li>`
+                    )
+                    .join("");
+            }
+
+            modalList.addEventListener("click", (e) => {
+                const btn = e.target.closest("[data-delete-comment]");
+                if (!btn || !activeNewsId || !Array.isArray(store[activeNewsId])) return;
+
+                const index = Number(btn.dataset.deleteComment);
+                if (Number.isNaN(index) || index < 0 || index >= store[activeNewsId].length) return;
+
+                store[activeNewsId].splice(index, 1);
+                saveComments(store);
+                renderModalComments(activeNewsId);
+                updateCardCounters();
+            });
+
+            function openNewsModal(card) {
+                activeNewsId = card.dataset.newsId;
+                const extra = (typeof TRAILERS_DATA !== "undefined" && TRAILERS_DATA[activeNewsId]) || {};
+                const ytId = extra.youtubeId || card.dataset.ytId || "";
+                const accent = card.style.getPropertyValue("--card-color") || "#ff2a85";
+                const watchUrl = ytId ? `https://www.youtube.com/watch?v=${ytId}` : "https://www.youtube.com";
+                const thumbUrl = ytId ? `https://i.ytimg.com/vi/${ytId}/hqdefault.jpg` : "";
+
+                dialog.style.setProperty("--card-color", accent);
+                document.getElementById("news-modal-tag").textContent = card.dataset.tag || "ACTUALIDAD";
+                document.getElementById("news-modal-title").textContent = card.dataset.title || "";
+                document.getElementById("news-modal-desc").textContent = extra.fullDesc || card.dataset.desc || "";
+                document.getElementById("news-modal-platforms").textContent = card.dataset.platforms || "";
+
+                ytLink.href = watchUrl;
+                fallbackBtn.href = watchUrl;
+                fallbackImg.src = thumbUrl;
+
+                if (ytId) {
+                    iframe.style.display = "block";
+                    fallbackBox.style.display = "none";
+                    iframe.src = `https://www.youtube.com/embed/${ytId}?autoplay=1&rel=0`;
+                } else {
+                    iframe.src = "";
+                    iframe.style.display = "none";
+                    fallbackBox.style.display = "block";
+                }
+
+                renderModalComments(activeNewsId);
+
+                modal.classList.add("is-open");
+                modal.setAttribute("aria-hidden", "false");
+            }
+
+            function closeNewsModal() {
+                modal.classList.remove("is-open");
+                modal.setAttribute("aria-hidden", "true");
+                iframe.src = "";
+                activeNewsId = null;
+            }
+
+            document.querySelectorAll(".news-item").forEach((card) => {
+                card.addEventListener("click", () => openNewsModal(card));
+            });
+
+            modalForm.addEventListener("submit", (e) => {
+                e.preventDefault();
+                if (!activeNewsId) return;
+
+                const author = modalForm.elements.author.value.trim();
+                const message = modalForm.elements.message.value.trim();
+                if (!author || !message) return;
+
+                if (!Array.isArray(store[activeNewsId])) {
+                    store[activeNewsId] = [];
+                }
+
+                store[activeNewsId].unshift({
+                    author,
+                    message,
+                    date: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })
+                });
+
+                saveComments(store);
+                modalForm.elements.message.value = "";
+                renderModalComments(activeNewsId);
+                updateCardCounters();
+            });
+
+            slot.querySelectorAll("[data-close-news-modal]").forEach((el) => {
+                el.addEventListener("click", closeNewsModal);
+            });
+
+            document.addEventListener("keydown", (e) => {
+                if (e.key === "Escape" && modal.classList.contains("is-open")) {
+                    closeNewsModal();
+                }
+            });
+
+            updateCardCounters();
+        })();
+    </script>
+</body>
+</html>

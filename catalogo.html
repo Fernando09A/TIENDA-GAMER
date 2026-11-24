@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juegos - Tienda Gamers</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/catalogo.css">
+    <link rel="stylesheet" href="css/miniventana.css">
+</head>
+<body class="page-sub">
+
+    <header class="navbar">
+        <a href="index.html" class="logo">
+            <div class="logo__icon">TG</div>
+            <div class="logo__text">
+                <span class="logo__top">TIENDA</span>
+                <span class="logo__bottom">GAMERS</span>
+            </div>
+        </a>
+        <nav class="nav-links">
+            <a class="nav-links__item nav-links__item--lift" href="index.html">INICIO</a>
+            <a class="nav-links__item nav-links__item--lift nav-links__item--active" href="catalogo.html">JUEGOS</a>
+            <a class="nav-links__item nav-links__item--lift" href="nosotros.html">NOSOTROS</a>
+        </nav>
+        <a href="compras.html" class="cart-btn cart-btn--lift" aria-label="Bolsa de compras">
+            <svg class="cart-btn__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <path d="M16 10a4 4 0 0 1-8 0"></path>
+            </svg>
+            <span class="cart-btn__count">0</span>
+        </a>
+    </header>
+
+    <main class="store-page">
+        <h1 class="store-page__title">Juegos <span class="hero__title-outline">destacados</span></h1>
+
+        <div class="game-grid">
+            <article class="game-card" style="--card-color:#38bdf8;" data-id="hollow-knight" data-title="Hollow Knight" data-genre="METROIDVANIA" data-platforms="PC · PS · XBOX · SWITCH" data-score="9.6" data-tagline="Desciende a un reino olvidado" data-price="14.99" data-desc="Aventura metroidvania con combates precisos y secretos en cada rincón.">
+                <div class="game-card__thumb">
+                    <img src="https://i.ytimg.com/vi/UAO2urG23S4/hqdefault.jpg" alt="Hollow Knight" loading="lazy">
+                </div>
+                <div class="game-card__meta"><span>METROIDVANIA</span><span>PC · PS · XBOX · SWITCH</span></div>
+                <h3 class="game-card__title">Hollow Knight</h3>
+                <p class="game-card__tagline">Desciende a un reino olvidado</p>
+                <div class="game-card__score"><strong>9.6</strong><span>/10</span></div>
+                <p class="game-card__desc">Aventura metroidvania con combates precisos y secretos en cada rincón.</p>
+                <div class="game-card__footer"><span class="game-card__price">$14.99</span><button type="button" class="game-card__btn" data-add>AÑADIR</button></div>
+            </article>
+
+            <article class="game-card" style="--card-color:#f97316;" data-id="gow-ragnarok" data-title="God of War Ragnarök" data-genre="ACCIÓN" data-platforms="PC · PLAYSTATION" data-score="9.4" data-tagline="El destino no espera a Kratos" data-price="49.99" data-desc="Kratos y Atreus enfrentan el fin de los nueve reinos en una épica aventura.">
+                <div class="game-card__thumb">
+                    <img src="https://i.ytimg.com/vi/EE-4GvjKcfs/hqdefault.jpg" alt="God of War Ragnarök" loading="lazy">
+                </div>
+                <div class="game-card__meta"><span>ACCIÓN</span><span>PC · PLAYSTATION</span></div>
+                <h3 class="game-card__title">God of War Ragnarök</h3>
+                <p class="game-card__tagline">El destino no espera a Kratos</p>
+                <div class="game-card__score"><strong>9.4</strong><span>/10</span></div>
+                <p class="game-card__desc">Kratos y Atreus enfrentan el fin de los nueve reinos en una épica aventura.</p>
+                <div class="game-card__footer"><span class="game-card__price">$49.99</span><button type="button" class="game-card__btn" data-add>AÑADIR</button></div>
+            </article>
+
+            <article class="game-card" style="--card-color:#c084fc;" data-id="party-animals" data-title="Party Animals" data-genre="MULTIJUGADOR" data-platforms="PC · XBOX" data-score="8.7" data-tagline="Amistad, caos y muchas caídas" data-price="19.99" data-desc="Peleas divertidas con físicas impredecibles para jugar con amigos.">
+                <div class="game-card__thumb">
+                    <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1260320/header.jpg" alt="Party Animals" loading="lazy">
+                </div>
+                <div class="game-card__meta"><span>MULTIJUGADOR</span><span>PC · XBOX</span></div>
+                <h3 class="game-card__title">Party Animals</h3>
+                <p class="game-card__tagline">Amistad, caos y muchas caídas</p>
+                <div class="game-card__score"><strong>8.7</strong><span>/10</span></div>
+                <p class="game-card__desc">Peleas divertidas con físicas impredecibles para jugar con amigos.</p>
+                <div class="game-card__footer"><span class="game-card__price">$19.99</span><button type="button" class="game-card__btn" data-add>AÑADIR</button></div>
+            </article>
+
+            <article class="game-card" style="--card-color:#eab308;" data-id="elden-ring" data-title="Elden Ring" data-genre="RPG ACCIÓN" data-platforms="PC · PS · XBOX" data-score="9.7" data-tagline="Álzate, Sinluz" data-price="59.99" data-desc="Un mundo abierto oscuro y monumental con jefes memorables.">
+                <div class="game-card__thumb">
+                    <img src="https://i.ytimg.com/vi/E3Huy2cdih0/hqdefault.jpg" alt="Elden Ring" loading="lazy">
+                </div>
+                <div class="game-card__meta"><span>RPG ACCIÓN</span><span>PC · PS · XBOX</span></div>
+                <h3 class="game-card__title">Elden Ring</h3>
+                <p class="game-card__tagline">Álzate, Sinluz</p>
+                <div class="game-card__score"><strong>9.7</strong><span>/10</span></div>
+                <p class="game-card__desc">Un mundo abierto oscuro y monumental con jefes memorables.</p>
+                <div class="game-card__footer"><span class="game-card__price">$59.99</span><button type="button" class="game-card__btn" data-add>AÑADIR</button></div>
+            </article>
+
+            <article class="game-card" style="--card-color:#facc15;" data-id="cyberpunk-2077" data-title="Cyberpunk 2077" data-genre="CIENCIA FICCIÓN" data-platforms="PC · PS · XBOX" data-score="8.9" data-tagline="Bienvenido a Night City" data-price="39.99" data-desc="Mercenario urbano con implantes en una metrópolis futurista.">
+                <div class="game-card__thumb">
+                    <img src="https://i.ytimg.com/vi/8X2kIfS6fb8/hqdefault.jpg" alt="Cyberpunk 2077" loading="lazy">
+                </div>
+                <div class="game-card__meta"><span>CIENCIA FICCIÓN</span><span>PC · PS · XBOX</span></div>
+                <h3 class="game-card__title">Cyberpunk 2077</h3>
+                <p class="game-card__tagline">Bienvenido a Night City</p>
+                <div class="game-card__score"><strong>8.9</strong><span>/10</span></div>
+                <p class="game-card__desc">Mercenario urbano con implantes en una metrópolis futurista.</p>
+                <div class="game-card__footer"><span class="game-card__price">$39.99</span><button type="button" class="game-card__btn" data-add>AÑADIR</button></div>
+            </article>
+
+            <article class="game-card" style="--card-color:#f43f5e;" data-id="cuphead" data-title="Cuphead" data-genre="RUN & GUN" data-platforms="PC · PS · XBOX · SWITCH" data-score="9.1" data-tagline="Dibujos de los años 30" data-price="19.99" data-desc="Acción clásica de disparos y jefes con arte dibujado a mano.">
+                <div class="game-card__thumb">
+                    <img src="https://i.ytimg.com/vi/NN-9SQXoi50/hqdefault.jpg" alt="Cuphead" loading="lazy">
+                </div>
+                <div class="game-card__meta"><span>RUN & GUN</span><span>PC · PS · XBOX · SWITCH</span></div>
+                <h3 class="game-card__title">Cuphead</h3>
+                <p class="game-card__tagline">Dibujos de los años 30</p>
+                <div class="game-card__score"><strong>9.1</strong><span>/10</span></div>
+                <p class="game-card__desc">Acción clásica de disparos y jefes con arte dibujado a mano.</p>
+                <div class="game-card__footer"><span class="game-card__price">$19.99</span><button type="button" class="game-card__btn" data-add>AÑADIR</button></div>
+            </article>
+
+            <article class="game-card" style="--card-color:#d97706;" data-id="rdr2" data-title="Red Dead Redemption 2" data-genre="AVENTURA" data-platforms="PC · PS · XBOX" data-score="9.8" data-tagline="El ocaso del lejano oeste" data-price="34.99" data-desc="Historia de lealtad y supervivencia en un mundo abierto vivo.">
+                <div class="game-card__thumb">
+                    <img src="https://i.ytimg.com/vi/gmA6MrX81z4/hqdefault.jpg" alt="Red Dead Redemption 2" loading="lazy">
+                </div>
+                <div class="game-card__meta"><span>AVENTURA</span><span>PC · PS · XBOX</span></div>
+                <h3 class="game-card__title">Red Dead Redemption 2</h3>
+                <p class="game-card__tagline">El ocaso del lejano oeste</p>
+                <div class="game-card__score"><strong>9.8</strong><span>/10</span></div>
+                <p class="game-card__desc">Historia de lealtad y supervivencia en un mundo abierto vivo.</p>
+                <div class="game-card__footer"><span class="game-card__price">$34.99</span><button type="button" class="game-card__btn" data-add>AÑADIR</button></div>
+            </article>
+
+            <article class="game-card" style="--card-color:#a855f7;" data-id="hades" data-title="Hades" data-genre="ROGUELIKE" data-platforms="PC · PS · XBOX · SWITCH" data-score="9.5" data-tagline="Desafía al dios de los muertos" data-price="24.99" data-desc="Combate frenético y bendiciones olímpicas en el Inframundo.">
+                <div class="game-card__thumb">
+                    <img src="https://i.ytimg.com/vi/91t0ha9x0AE/hqdefault.jpg" alt="Hades" loading="lazy">
+                </div>
+                <div class="game-card__meta"><span>ROGUELIKE</span><span>PC · PS · XBOX · SWITCH</span></div>
+                <h3 class="game-card__title">Hades</h3>
+                <p class="game-card__tagline">Desafía al dios de los muertos</p>
+                <div class="game-card__score"><strong>9.5</strong><span>/10</span></div>
+                <p class="game-card__desc">Combate frenético y bendiciones olímpicas en el Inframundo.</p>
+                <div class="game-card__footer"><span class="game-card__price">$24.99</span><button type="button" class="game-card__btn" data-add>AÑADIR</button></div>
+            </article>
+
+            <article class="game-card" style="--card-color:#818cf8;" data-id="baldurs-gate-3" data-title="Baldur's Gate 3" data-genre="ROL TÁCTICO" data-platforms="PC · PS · XBOX" data-score="9.7" data-tagline="Reúne a tu grupo" data-price="59.99" data-desc="Rol basado en D&amp;D con decisiones con peso real y multijugador.">
+                <div class="game-card__thumb">
+                    <img src="https://i.ytimg.com/vi/1T22wNvoNiU/hqdefault.jpg" alt="Baldur's Gate 3" loading="lazy">
+                </div>
+                <div class="game-card__meta"><span>ROL TÁCTICO</span><span>PC · PS · XBOX</span></div>
+                <h3 class="game-card__title">Baldur's Gate 3</h3>
+                <p class="game-card__tagline">Reúne a tu grupo</p>
+                <div class="game-card__score"><strong>9.7</strong><span>/10</span></div>
+                <p class="game-card__desc">Rol basado en D&amp;D con decisiones con peso real y multijugador.</p>
+                <div class="game-card__footer"><span class="game-card__price">$59.99</span><button type="button" class="game-card__btn" data-add>AÑADIR</button></div>
+            </article>
+
+            <article class="game-card" style="--card-color:#22d3ee;" data-id="celeste" data-title="Celeste" data-genre="PLATAFORMAS" data-platforms="PC · PS · XBOX · SWITCH" data-score="9.3" data-tagline="Escala la montaña" data-price="16.99" data-desc="Plataformas de precisión milimétrica con historia conmovedora.">
+                <div class="game-card__thumb">
+                    <img src="https://i.ytimg.com/vi/70d9irlxiB4/hqdefault.jpg" alt="Celeste" loading="lazy">
+                </div>
+                <div class="game-card__meta"><span>PLATAFORMAS</span><span>PC · PS · XBOX · SWITCH</span></div>
+                <h3 class="game-card__title">Celeste</h3>
+                <p class="game-card__tagline">Escala la montaña</p>
+                <div class="game-card__score"><strong>9.3</strong><span>/10</span></div>
+                <p class="game-card__desc">Plataformas de precisión milimétrica con historia conmovedora.</p>
+                <div class="game-card__footer"><span class="game-card__price">$16.99</span><button type="button" class="game-card__btn" data-add>AÑADIR</button></div>
+            </article>
+
+            <article class="game-card" style="--card-color:#ec4899;" data-id="witcher-3" data-title="The Witcher 3: Wild Hunt" data-genre="ACCIÓN RPG" data-platforms="PC · PS · XBOX" data-score="9.6" data-tagline="Caza monstruos" data-price="29.99" data-desc="Encarna a Geralt de Rivia en un continente vasto y lleno de contratos.">
+                <div class="game-card__thumb">
+                    <img src="https://i.ytimg.com/vi/c0i88t0Kacs/hqdefault.jpg" alt="The Witcher 3: Wild Hunt" loading="lazy">
+                </div>
+                <div class="game-card__meta"><span>ACCIÓN RPG</span><span>PC · PS · XBOX</span></div>
+                <h3 class="game-card__title">The Witcher 3: Wild Hunt</h3>
+                <p class="game-card__tagline">Caza monstruos</p>
+                <div class="game-card__score"><strong>9.6</strong><span>/10</span></div>
+                <p class="game-card__desc">Encarna a Geralt de Rivia en un continente vasto y lleno de contratos.</p>
+                <div class="game-card__footer"><span class="game-card__price">$29.99</span><button type="button" class="game-card__btn" data-add>AÑADIR</button></div>
+            </article>
+
+            <article class="game-card" style="--card-color:#fb7185;" data-id="sekiro" data-title="Sekiro: Shadows Die Twice" data-genre="ACCIÓN" data-platforms="PC · PS · XBOX" data-score="9.4" data-tagline="Domina el desvío" data-price="59.99" data-desc="Duelos intensos en el Japón Sengoku donde manda la precisión.">
+                <div class="game-card__thumb">
+                    <img src="https://i.ytimg.com/vi/rXMX4YJ7Lks/hqdefault.jpg" alt="Sekiro: Shadows Die Twice" loading="lazy">
+                </div>
+                <div class="game-card__meta"><span>ACCIÓN</span><span>PC · PS · XBOX</span></div>
+                <h3 class="game-card__title">Sekiro: Shadows Die Twice</h3>
+                <p class="game-card__tagline">Domina el desvío</p>
+                <div class="game-card__score"><strong>9.4</strong><span>/10</span></div>
+                <p class="game-card__desc">Duelos intensos en el Japón Sengoku donde manda la precisión.</p>
+                <div class="game-card__footer"><span class="game-card__price">$59.99</span><button type="button" class="game-card__btn" data-add>AÑADIR</button></div>
+            </article>
+
+            <article class="game-card" style="--card-color:#4ade80;" data-id="minecraft" data-title="Minecraft" data-genre="SANDBOX" data-platforms="PC · PS · XBOX · SWITCH" data-score="9.2" data-tagline="Construye y sobrevive" data-price="26.99" data-desc="Creatividad sin límites, supervivencia y multijugador.">
+                <div class="game-card__thumb">
+                    <img src="https://i.ytimg.com/vi/MmB9b5njVbA/hqdefault.jpg" alt="Minecraft" loading="lazy">
+                </div>
+                <div class="game-card__meta"><span>SANDBOX</span><span>PC · PS · XBOX · SWITCH</span></div>
+                <h3 class="game-card__title">Minecraft</h3>
+                <p class="game-card__tagline">Construye y sobrevive</p>
+                <div class="game-card__score"><strong>9.2</strong><span>/10</span></div>
+                <p class="game-card__desc">Creatividad sin límites, supervivencia y multijugador.</p>
+                <div class="game-card__footer"><span class="game-card__price">$26.99</span><button type="button" class="game-card__btn" data-add>AÑADIR</button></div>
+            </article>
+        </div>
+    </main>
+
+    <div id="miniventana-slot"></div>
+
+    <script src="js/trailers-data.js"></script>
+    <script src="js/cart.js"></script>
+    <script>
+        (async function () {
+            const slot = document.getElementById("miniventana-slot");
+            const res = await fetch("miniventana.html");
+            slot.innerHTML = await res.text();
+
+            const modal = document.getElementById("game-modal");
+            const dialog = document.getElementById("game-modal-dialog");
+            const iframe = document.getElementById("modal-iframe");
+            const yt = document.getElementById("modal-yt");
+            let currentGame = null;
+
+            function addAndGo(game) {
+                if (typeof addToCart === "function") addToCart(game);
+                window.location.href = "compras.html";
+            }
+
+            function openModal(card) {
+                const id = card.dataset.id;
+                const extra = (typeof TRAILERS_DATA !== "undefined" && TRAILERS_DATA[id]) || {};
+                const ytId = extra.youtubeId || "UAO2urG23S4";
+
+                currentGame = {
+                    id,
+                    title: card.dataset.title,
+                    price: Number(card.dataset.price),
+                    platform: card.dataset.platforms
+                };
+
+                dialog.style.setProperty("--card-color", card.style.getPropertyValue("--card-color") || "#ff2a85");
+                document.getElementById("modal-tag").textContent = `${card.dataset.genre} — TRÁILER`;
+                document.getElementById("modal-title").textContent = card.dataset.title;
+                document.getElementById("modal-desc").textContent = extra.fullDesc || card.dataset.desc;
+                document.getElementById("modal-score").textContent = `${card.dataset.score}/10`;
+                document.getElementById("modal-platforms").textContent = card.dataset.platforms;
+                document.getElementById("modal-price").textContent = `$${Number(card.dataset.price).toFixed(2)}`;
+                iframe.src = `https://www.youtube.com/embed/${ytId}?autoplay=1&rel=0`;
+                yt.href = `https://www.youtube.com/watch?v=${ytId}`;
+
+                modal.classList.add("is-open");
+                modal.setAttribute("aria-hidden", "false");
+            }
+
+            function closeModal() {
+                modal.classList.remove("is-open");
+                modal.setAttribute("aria-hidden", "true");
+                iframe.src = "";
+            }
+
+            document.querySelectorAll(".game-card").forEach((card) => {
+                card.addEventListener("click", (e) => {
+                    if (e.target.closest("[data-add]")) return;
+                    openModal(card);
+                });
+                card.querySelector("[data-add]").addEventListener("click", (e) => {
+                    e.stopPropagation();
+                    addAndGo({
+                        id: card.dataset.id,
+                        title: card.dataset.title,
+                        price: Number(card.dataset.price),
+                        platform: card.dataset.platforms
+                    });
+                });
+            });
+
+            document.getElementById("modal-add").addEventListener("click", () => {
+                if (currentGame) addAndGo(currentGame);
+            });
+            slot.querySelectorAll("[data-close-modal]").forEach((el) => el.addEventListener("click", closeModal));
+            document.addEventListener("keydown", (e) => {
+                if (e.key === "Escape" && modal.classList.contains("is-open")) closeModal();
+            });
+        })();
+    </script>
+</body>
+</html>

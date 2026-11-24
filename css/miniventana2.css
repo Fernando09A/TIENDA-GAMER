@@ -1,0 +1,318 @@
+.news-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.news-modal.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.news-modal__backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(5, 5, 10, 0.82);
+    backdrop-filter: blur(6px);
+}
+
+.news-modal__dialog {
+    --card-color: var(--accent-pink);
+    position: relative;
+    z-index: 2;
+    width: min(92vw, 980px);
+    max-height: 86vh;
+    overflow-y: auto;
+    background: #0d0d16;
+    border: 1px solid color-mix(in srgb, var(--card-color) 55%, rgba(255, 255, 255, 0.15));
+    border-radius: 10px; /* Rectangular con bordes suaves */
+    padding: 24px;
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.75);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.news-modal__close {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 34px;
+    height: 34px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    background: rgba(255, 255, 255, 0.06);
+    color: var(--text-white);
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.news-modal__close:hover {
+    border-color: var(--card-color);
+    color: var(--card-color);
+}
+
+.news-modal__top {
+    display: grid;
+    grid-template-columns: 1.45fr 1fr;
+    gap: 20px;
+    align-items: start;
+    padding-right: 28px;
+}
+
+.news-modal__video-box {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #050508;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.news-modal__video-box iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+}
+
+.news-modal__side {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.news-modal__tag {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: var(--card-color);
+}
+
+.news-modal__title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(18px, 2.2vw, 24px);
+    line-height: 1.25;
+    color: var(--text-white);
+}
+
+.news-modal__desc {
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--text-gray);
+}
+
+.news-modal__meta-row {
+    margin-top: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    font-size: 11px;
+    color: var(--text-gray);
+}
+
+.news-modal__meta-row a {
+    color: var(--card-color);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.news-modal__comments {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.news-modal__comments-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    color: var(--text-gray);
+}
+
+.news-modal__count {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--card-color);
+}
+
+.news-modal__comments-list {
+    list-style: none;
+    max-height: 160px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.news-modal__empty {
+    font-size: 12px;
+    color: var(--text-gray);
+    opacity: 0.8;
+}
+
+.news-modal__comment-item {
+    background: rgba(255, 255, 255, 0.04);
+    border-left: 3px solid var(--card-color);
+    border-radius: 4px;
+    padding: 8px 12px;
+}
+
+.news-modal__comment-top {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    margin-bottom: 3px;
+}
+
+.news-modal__comment-top strong {
+    color: var(--text-white);
+}
+
+.news-modal__comment-top span {
+    color: var(--text-gray);
+    font-size: 10px;
+}
+
+.news-modal__comment-item p {
+    font-size: 12px;
+    line-height: 1.45;
+    color: var(--text-gray);
+    word-break: break-word;
+}
+
+.news-modal__form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.news-modal__input {
+    flex: 1;
+    min-width: 160px;
+    padding: 9px 12px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    background: rgba(0, 0, 0, 0.4);
+    color: var(--text-white);
+    font-size: 12px;
+    outline: none;
+}
+
+.news-modal__input--name {
+    max-width: 140px;
+}
+
+.news-modal__input:focus {
+    border-color: var(--card-color);
+}
+
+.news-modal__submit {
+    padding: 9px 18px;
+    border-radius: 6px;
+    border: none;
+    background: var(--card-color);
+    color: #09090f;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+@media (max-width: 780px) {
+    .news-modal__top {
+        grid-template-columns: 1fr;
+        padding-right: 0;
+    }
+}
+.news-modal__video-box {
+    position: relative;
+}
+
+.news-modal__fallback {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 210px;
+}
+
+.news-modal__fallback img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.42);
+}
+
+.news-modal__fallback-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 18px;
+    text-align: center;
+    background: rgba(7, 7, 13, 0.55);
+}
+
+.news-modal__fallback-overlay p {
+    font-size: 12px;
+    line-height: 1.45;
+    color: #e4e4e7;
+    max-width: 340px;
+}
+
+.news-modal__fallback-overlay a {
+    padding: 9px 14px;
+    border-radius: 6px;
+    background: var(--card-color, #ff2a85);
+    color: #09090f;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+    text-decoration: none;
+}
+
+.news-modal__comment-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.news-modal__delete-btn {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    color: var(--text-gray);
+    border-radius: 4px;
+    width: 20px;
+    height: 20px;
+    font-size: 11px;
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+}
+
+.news-modal__delete-btn:hover {
+    border-color: #ef4444;
+    color: #ffffff;
+    background: rgba(239, 68, 68, 0.25);
+}

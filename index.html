@@ -4,91 +4,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tienda Gamers - Juega Sin Límites</title>
-    <link rel="preconnect" href="https://googleapis.com">
-    <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
 </head>
 <body>
- 
+
     <!-- Contenedor a pantalla completa -->
     <div class="fullscreen-wrapper">
-        
+
         <!-- Fondos, Anillos y Esferas -->
-        <div class="bg-effects">
+        <div class="fullscreen-wrapper__bg-effects">
             <div class="ambient-glow"></div>
-            <div class="ring ring-outer"></div>
-            <div class="ring ring-inner"></div>
-            <div class="sphere-main">
-                <div class="sphere-glint"></div>
+            <div class="ring ring--outer"></div>
+            <div class="ring ring--inner"></div>
+            <div class="sphere sphere--main sphere--float-slow">
+                <div class="sphere__glint"></div>
             </div>
-            <div class="sphere-small"></div>
+            <div class="sphere sphere--small sphere--float-fast"></div>
         </div>
- 
+
         <!-- Barra de Navegación -->
         <header class="navbar">
-            <div class="logo">
-                <div class="logo-icon">TG</div>
-                <div class="logo-text">
-                    <span class="top">TIENDA</span>
-                    <span class="bottom">GAMERS</span>
+            <a href="index.html" class="logo">
+                <div class="logo__icon">TG</div>
+                <div class="logo__text">
+                    <span class="logo__top">TIENDA</span>
+                    <span class="logo__bottom">GAMERS</span>
                 </div>
-            </div>
- 
+            </a>
+
             <nav class="nav-links">
-                <a href="#">JUEGOS</a>
-                <a href="#">OFERTAS</a>
-                <a href="#">NOSOTROS</a>
+                <a class="nav-links__item nav-links__item--lift" href="catalogo.html">JUEGOS</a>
+                <a class="nav-links__item nav-links__item--lift" href="noticias.html">NOTICIAS VIDEOJUEGOS</a>
+                <a class="nav-links__item nav-links__item--lift" href="nosotros.html">NOSOTROS</a>
             </nav>
- 
-            <div class="cart-btn">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+            <a href="compras.html" class="cart-btn cart-btn--lift" aria-label="Bolsa de compras">
+                <svg class="cart-btn__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
                     <line x1="3" y1="6" x2="21" y2="6"></line>
                     <path d="M16 10a4 4 0 0 1-8 0"></path>
                 </svg>
-                <span class="cart-badge"></span>
-            </div>
+                <span class="cart-btn__badge"></span>
+                <span class="cart-btn__count">0</span>
+            </a>
         </header>
- 
+
         <!-- Contenido Principal -->
         <main class="hero">
-            <div class="hero-content">
-                <div class="eyebrow">
-                    <span class="line"></span>
-                    <span>SELECCIÓN DE LA SEMANA</span>
+            <div class="hero__content">
+                <div class="hero__eyebrow">
+                    <span class="hero__eyebrow-line"></span>
+                    <span class="hero__eyebrow-text">SELECCIÓN DE LA SEMANA</span>
                 </div>
- 
-                <h1 class="hero-title">
+
+                <h1 class="hero__title">
                     JUEGA SIN<br>
-                    <span class="outline-text">LÍMITES.</span>
+                    <span class="hero__title-outline">LÍMITES.</span>
                 </h1>
- 
-                <p class="hero-subtitle">
+
+                <p class="hero__subtitle">
                     Descubre mundos extraordinarios. Mira el tráiler, revisa la crítica y encuentra tu próxima obsesión.
                 </p>
- 
-                <button class="btn-primary">
-                    <span>EXPLORAR CATÁLOGO</span>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+
+                <a href="catalogo.html" class="hero__cta hero__cta--lift">
+                    <span class="hero__cta-text">EXPLORAR CATÁLOGO</span>
+                    <svg class="hero__cta-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                         <line x1="12" y1="5" x2="12" y2="19"></line>
                         <polyline points="19 12 12 19 5 12"></polyline>
                     </svg>
-                </button>
+                </a>
             </div>
         </main>
- 
+
         <!-- Indicador inferior derecho (03) -->
         <footer class="bottom-bar">
             <div class="slide-indicator">
-                <span class="number">03</span>
-                <span class="line-indicator"></span>
-                <span class="label">IMPRESCINDIBLES</span>
+                <span class="slide-indicator__number">03</span>
+                <span class="slide-indicator__line"></span>
+                <span class="slide-indicator__label">IMPRESCINDIBLES</span>
             </div>
         </footer>
- 
+
     </div>
- 
+
+    <script src="js/cart.js"></script>
 </body>
 </html>
- 

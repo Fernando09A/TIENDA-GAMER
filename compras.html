@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bolsa de Compras - Tienda Gamers</title>
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/compras.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="page-sub">
+
+    <header class="navbar">
+        <a href="index.html" class="logo">
+            <div class="logo__icon">TG</div>
+            <div class="logo__text">
+                <span class="logo__top">TIENDA</span>
+                <span class="logo__bottom">GAMERS</span>
+            </div>
+        </a>
+
+        <nav class="nav-links">
+            <a class="nav-links__item nav-links__item--lift" href="index.html">INICIO</a>
+            <a class="nav-links__item nav-links__item--lift" href="catalogo.html">JUEGOS</a>
+            <a class="nav-links__item nav-links__item--lift" href="nosotros.html">NOSOTROS</a>
+        </nav>
+
+        <a href="compras.html" class="cart-btn cart-btn--lift" aria-label="Bolsa de compras">
+            <svg class="cart-btn__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <path d="M16 10a4 4 0 0 1-8 0"></path>
+            </svg>
+            <span class="cart-btn__badge"></span>
+            <span class="cart-btn__count"></span>
+        </a>
+    </header>
+
+    <main class="store-page">
+        <section class="store-page__header">
+            <div class="hero__eyebrow">
+                <span class="hero__eyebrow-line"></span>
+                <span class="hero__eyebrow-text">TU BOLSA</span>
+            </div>
+            <h1 class="store-page__title">CARRITO DE <span class="hero__title-outline">COMPRAS</span></h1>
+        </section>
+
+        <section class="cart-layout">
+            <div id="cart-items-list" class="cart-layout__items"></div>
+
+            <aside class="cart-summary">
+                <h2 class="cart-summary__title">RESUMEN DEL PEDIDO</h2>
+                <div class="cart-summary__row">
+                    <span>Artículos</span>
+                    <span id="cart-summary-count">0 juegos</span>
+                </div>
+                <div class="cart-summary__row">
+                    <span>Subtotal</span>
+                    <span id="cart-subtotal">$0.00</span>
+                </div>
+                <div class="cart-summary__row cart-summary__row--total">
+                    <span>Total a pagar</span>
+                    <span id="cart-total">$0.00</span>
+                </div>
+
+                <form id="checkout-form" class="checkout-form">
+                    <label class="checkout-form__label" for="buyer-email">Correo para entrega digital</label>
+                    <input class="checkout-form__input" id="buyer-email" type="email" placeholder="jugador@correo.com" required>
+
+                    <label class="checkout-form__label" for="payment-method">Método de pago</label>
+                    <select class="checkout-form__input" id="payment-method">
+                        <option value="card">Tarjeta Débito / Crédito</option>
+                        <option value="wallet">Billetera / Saldo Tienda</option>
+                        <option value="transfer">Transferencia / QR</option>
+                    </select>
+
+                    <button type="submit" class="hero__cta hero__cta--lift checkout-form__submit">
+                        <span>FINALIZAR COMPRA</span>
+                    </button>
+                </form>
+
+                <p id="checkout-status" class="cart-summary__status"></p>
+            </aside>
+        </section>
+    </main>
+
+    <script src="js/cart.js"></script>
+</body>
+</html>

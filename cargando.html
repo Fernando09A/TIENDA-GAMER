@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cargando... - Tienda Gamers</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <style>
+        .loader-screen {
+            position: relative;
+            z-index: 10;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 32px;
+        }
+
+        .loader-screen__brand {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(24px, 4vw, 38px);
+            font-weight: 900;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+        }
+
+        .loader-screen__brand span {
+            color: var(--accent-pink);
+        }
+
+        .loader-screen__status {
+            font-size: 13px;
+            letter-spacing: 2px;
+            color: var(--text-gray);
+            margin-bottom: 28px;
+        }
+
+        .loader-screen__bar-wrap {
+            width: min(380px, 85vw);
+            height: 6px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.1);
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.14);
+        }
+
+        .loader-screen__bar {
+            width: 0%;
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent-pink), var(--accent-purple));
+            transition: width 0.55s ease;
+        }
+
+        .loader-screen__percent {
+            margin-top: 14px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 14px;
+            color: #f472b6;
+        }
+    </style>
+</head>
+<body class="page-sub">
+
+    <div class="fullscreen-wrapper__bg-effects">
+        <div class="ambient-glow"></div>
+        <div class="ring ring--outer"></div>
+        <div class="ring ring--inner"></div>
+        <div class="sphere sphere--main sphere--float-slow">
+            <div class="sphere__glint"></div>
+        </div>
+        <div class="sphere sphere--small sphere--float-fast"></div>
+    </div>
+
+    <main class="loader-screen">
+        <div class="loader-screen__brand">TIENDA <span>GAMERS</span></div>
+        <p class="loader-screen__status" id="loader-status">CARGANDO SECCIÓN...</p>
+
+        <div class="loader-screen__bar-wrap">
+            <div class="loader-screen__bar" id="loader-bar"></div>
+        </div>
+        <span class="loader-screen__percent" id="loader-percent">0%</span>
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const params = new URLSearchParams(window.location.search);
+            const rawTarget = params.get("to") || "catalogo.html";
+            // Evita redirecciones externas por seguridad
+            const target = rawTarget.startsWith("http") || rawTarget.startsWith("//")
+                ? "catalogo.html"
+                : rawTarget;
+
+            const bar = document.getElementById("loader-bar");
+            const percent = document.getElementById("loader-percent");
+            const status = document.getElementById("loader-status");
+
+            if (target.includes("juego.html")) {
+                status.textContent = "ABRIENDO FICHA Y TRÁILER...";
+            } else if (target.includes("compras.html")) {
+                status.textContent = "ABRIENDO BOLSA DE COMPRAS...";
+            } else if (target.includes("catalogo.html")) {
+                status.textContent = "CARGANDO CATÁLOGO Y NOTICIAS...";
+            }
+
+            requestAnimationFrame(() => {
+                bar.style.width = "100%";
+            });
+
+            let current = 0;
+            const interval = setInterval(() => {
+                current += 20;
+                if (current > 100) current = 100;
+                percent.textContent = `${current}%`;
+                if (current >= 100) {
+                    clearInterval(interval);
+                    window.location.href = target;
+                }
+            }, 95);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<div class="news-modal" id="news-modal" aria-hidden="true">
+    <div class="news-modal__backdrop" data-close-news-modal></div>
+
+    <div class="news-modal__dialog" id="news-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="news-modal-title">
+        <button type="button" class="news-modal__close" data-close-news-modal aria-label="Cerrar ventana">✕</button>
+
+        <div class="news-modal__top">
+            <div class="news-modal__video-box" id="news-modal-video-box">
+                <iframe
+                    id="news-modal-iframe"
+                    src=""
+                    title="Video de crítica"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                ></iframe>
+                <div class="news-modal__fallback" id="news-modal-fallback">
+                    <img id="news-modal-fallback-img" src="" alt="Vista previa de crítica">
+                    <div class="news-modal__fallback-overlay">
+                        <p>Si el reproductor interno no carga o está restringido por el creador, ábrelo directo en YouTube:</p>
+                        <a id="news-modal-fallback-btn" href="#" target="_blank" rel="noopener noreferrer">ABRIR VIDEO EN YOUTUBE ↗</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="news-modal__side">
+                <span class="news-modal__tag" id="news-modal-tag">CRÍTICA &amp; ACTUALIDAD</span>
+                <h2 class="news-modal__title" id="news-modal-title">Título de la noticia</h2>
+                <p class="news-modal__desc" id="news-modal-desc"></p>
+                <div class="news-modal__meta-row">
+                    <span id="news-modal-platforms"></span>
+                    <a id="news-modal-yt" href="#" target="_blank" rel="noopener noreferrer">VER EN YOUTUBE ↗</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="news-modal__comments">
+            <div class="news-modal__comments-head">
+                <span>COMENTARIOS DE LA CRÍTICA</span>
+                <span class="news-modal__count" id="news-modal-counter">0</span>
+            </div>
+
+            <ul class="news-modal__comments-list" id="news-modal-comments-list"></ul>
+
+            <form class="news-modal__form" id="news-modal-form">
+                <input type="text" class="news-modal__input news-modal__input--name" name="author" placeholder="Tu apodo" maxlength="24" required>
+                <input type="text" class="news-modal__input" name="message" placeholder="Escribe tu opinión o crítica..." maxlength="220" required>
+                <button type="submit" class="news-modal__submit">PUBLICAR</button>
+            </form>
+        </div>
+    </div>
+</div>
